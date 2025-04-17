@@ -132,6 +132,26 @@ configurarPontoEscalaHorario();
 configurarSegurancaAcidenteTrabalho();
 
 if (continueClicked && currentPage == 1) {
+   //formularios que precisam confirmar duas variaveis
+  if(data.sltRH_SOLICITA_ATENDIMENTO == "Férias" && data.sltESCOLHA_TIPO_ATENDIMENTO == "Dúvida / Orientação"){
+  goToAndFinalPage(6);
+}
+  if(data.sltRH_SOLICITA_ATENDIMENTO == "FGTS" && data.sltESCOLHA_TIPO_ATENDIMENTO == "Dúvida / Orientação"){
+  goToAndFinalPage(9);
+}
+  if(data.sltRH_SOLICITA_ATENDIMENTO == "Folha Pagamento" && data.sltESCOLHA_TIPO_ATENDIMENTO == "Dúvida / Orientação"){
+  goToAndFinalPage(34);
+}
+  if(data.sltRH_SOLICITA_ATENDIMENTO == "Alteração de Dados de Funcionários e Declarações" && data.sltESCOLHA_TIPO_ATENDIMENTO == "Dúvida / Orientação"){
+  goToAndFinalPage(48);
+}
+  if(data.sltRH_SOLICITA_ATENDIMENTO == "Ponto" && data.sltESCOLHA_TIPO_ATENDIMENTO == "Dúvida / Orientação"){
+  goToAndFinalPage(52);
+}
+  if(data.sltRH_SOLICITA_ATENDIMENTO == "Segurança do trabalho" && data.sltESCOLHA_TIPO_ATENDIMENTO == "Dúvida / Orientação"){
+  goToAndFinalPage(63);
+}
+  
   switch (data.sltESCOLHA_TIPO_ATENDIMENTO) {
     case "Alteração Planejamento de Férias":
         goToAndFinalPage(2);
@@ -149,20 +169,12 @@ if (continueClicked && currentPage == 1) {
         goToAndFinalPage(5);
         break;
       
-    case "Férias - Dúvida / Orientação":
-        goToAndFinalPage(6);
-      break;
-      
     case "Atualização cadastral / RDT":
         goToAndFinalPage(7);
       break;
       
     case "Não pagamento, sem deposito":
       goToAndFinalPage(8);
-      break;
-      
-    case "FGTS Dúvida / Orientação":
-      goToAndFinalPage(9);
       break;
       
     case "Alteração de benefícios da cesta":
@@ -209,27 +221,27 @@ if (continueClicked && currentPage == 1) {
         goToAndFinalPage(20);
         break;
       
-     case "Pagamento - Informações sobre calculo de adicional noturno":
+     case "Informações sobre calculo de adicional noturno":
         goToAndFinalPage(21);
         break;
 
-    case "Pagamento - Informações sobre calculo de banco de horas":
+    case "Informações sobre calculo de banco de horas":
         goToAndFinalPage(22);
         break;
 
-    case "Pagamento - Informações sobre calculo de horas extra":
+    case "Informações sobre calculo de horas extra":
         goToAndFinalPage(23);
         break;
 
-    case "Pagamento - Informações sobre calculo de sobreaviso":
+    case "Informações sobre calculo de sobreaviso":
         goToAndFinalPage(24);
         break;
 
-    case "Pagamento - Informações sobre reajuste/Dissídio":
+    case "Informações sobre reajuste/Dissídio":
         goToAndFinalPage(25);
         break;
 
-    case "Pagamento - Salário não caiu":
+    case "Salário não caiu":
         goToAndFinalPage(26);
         break;
 
@@ -261,11 +273,7 @@ if (continueClicked && currentPage == 1) {
         goToAndFinalPage(33);
         break;
 
-    case "Folha Dúvida / Orientação":
-        goToAndFinalPage(34);
-        break;
-      
-    case "Cadastro - Alteração Cadastral":
+    case "Correção de dados de filiação (Pai e Mãe)":
         goToAndFinalPage(35);
         break;
 
@@ -289,39 +297,35 @@ if (continueClicked && currentPage == 1) {
         goToAndFinalPage(40);
         break;
 
-    case "Atualização dados funcionários - Alteração de conta corrente":
+    case "Alteração de conta corrente":
         goToAndFinalPage(41);
         break;
 
-    case "Atualização dados funcionários - Alteração de endereço residencial":
+    case "Alteração de endereço residencial":
         goToAndFinalPage(42);
         break;
 
-    case "Atualização dados funcionários - Alteração de estado civil":
+    case "Alteração de estado civil":
         goToAndFinalPage(43);
         break;
 
-    case "Atualização dados Funcionários - Alteração de nome":
+    case "Alteração de nome":
         goToAndFinalPage(44);
         break;
 
-    case "Atualização dados Funcionários - Inclusão ou Exclusão de dependentes":
+    case "Inclusão ou Exclusão de dependentes":
         goToAndFinalPage(45);
         break;
 
-    case "Atualização dados Funcionários - Inclusão ou renovação de cnh":
+    case "Inclusão ou renovação de cnh":
         goToAndFinalPage(46);
         break;
 
-    case "Atualização dados Funcionários - Transferência entre empresas":
+    case "Transferência entre empresas":
         goToAndFinalPage(47);
         break;
 
-    case "RH Dúvidas gerais":
-        goToAndFinalPage(48);
-        break;
-
-case "Alteração de escala de horário":
+    case "Alteração de escala de horário":
         goToAndFinalPage(49);
         break;
 
@@ -333,11 +337,7 @@ case "Alteração de escala de horário":
         goToAndFinalPage(51);
         break;
 
-    case "Ponto Dúvida / Orientação":
-        goToAndFinalPage(52);
-        break;
-      
-    case "Acidente de trabalho - Informar acidente de trabalho":
+    case "Informar acidente de trabalho":
         goToAndFinalPage(53);
         break;
 
@@ -357,15 +357,15 @@ case "Alteração de escala de horário":
         goToAndFinalPage(57);
         break;
 
-    case "Licença - Licença maternidade":
+    case "Licença maternidade":
         goToAndFinalPage(58);
         break;
 
-    case "Licença - Licença paternidade":
+    case "Licença paternidade":
         goToAndFinalPage(59);
         break;
 
-    case "Licença - Licenças legais":
+    case "Licenças legais":
         goToAndFinalPage(60);
         break;
 
@@ -377,17 +377,17 @@ case "Alteração de escala de horário":
         goToAndFinalPage(62);
         break;
 
-    case "Segurança do trabalho - Dúvida/Orientação":
-        goToAndFinalPage(63);
-        break;
-
     case "Declarações de vinculo":
         goToAndFinalPage(64);
         break;
 
     case "Solicitar crachá":
         goToAndFinalPage(65);
-        break;
+        break; 
+
+     case "Auxílio Home Office":
+        goToAndFinalPage(66);
+        break; 
       
   }
 }
